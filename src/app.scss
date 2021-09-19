@@ -1,0 +1,9 @@
+.app{
+    height: 100vh;
+
+    .section{
+        height: calc(100vh -70px);
+        width: 100%;
+        background-color: black;
+    }
+}
