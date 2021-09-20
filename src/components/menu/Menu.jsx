@@ -1,23 +1,23 @@
 import React from 'react'
 import "./menu.scss"
-export default function Menu() {
+export default function Menu({menuOpen, setmenuOpen}) {
     return (
-        <div className="menu">
+        <div className={"menu " + (menuOpen && "active")}>
             <ul>
-                <li>
+                <li onClick={()=>setmenuOpen(!menuOpen)}>
                     <a href="#intro">Home</a>
                 </li>
-                <li>
-                    <a href="#portfolio">Home</a>
+                <li onClick={()=>setmenuOpen(!menuOpen)}>
+                    <a href="#portfolio">Portfolio</a>
                 </li>
-                <li>
-                    <a href="#work">Home</a>
+                <li onClick={()=>setmenuOpen(!menuOpen)}>
+                    <a href="#work">Works</a>
                 </li>
-                <li>
-                    <a href="#testimonial">Home</a>
+                <li onClick={()=>setmenuOpen(!menuOpen)}>
+                    <a href="#testimonial">Testimonials</a>
                 </li>
-                <li>
-                    <a href="#contact">Home</a>
+                <li onClick={()=>setmenuOpen(!menuOpen)}>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
