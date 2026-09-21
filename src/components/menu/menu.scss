@@ -1,57 +1,66 @@
 @import "../../global.scss";
 
-.menu{
-    width: 300px;
-    height: 100vh;
-    background-color: $mainColor;
-    position: fixed;
-    top: 0;
-    right: -300px;
-    z-index: 2;
+.menu {
+  width: 320px;
+  height: 100vh;
+  background-color: #0b1120;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  right: -320px;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
 
-    scrollbar-width: none;//for firefox
-    &::-webkit-scrollbar{
-        display: none;
-    }
-    &::-webkit-scrollbar-track{
-        display: none;
-    }
+  &.active {
+    right: 0;
+  }
 
-    &::-webkit-scrollbar-thumb{
-        display: none;
-    }
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 1s ease;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 80%;
 
-    &.active{
-        right: 0;
-    }
+    li {
+      margin-bottom: 20px;
 
-    ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        font-size: 30px;
-        font-weight: 300;
-        color: white;
-        width: 60%;
+      a {
+        font-size: 20px;
+        font-weight: 500;
+        color: #94a3b8;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        display: block;
 
-        li{
-            margin-bottom: 30px;
-
-            a{
-                font-size: inherit;
-                color: inherit;
-                text-decoration: none;
-            }
-
-            &:hover{
-                font-weight: 500;
-            }
+        &:hover {
+          color: #38bdf8;
+          transform: translateX(6px);
         }
+      }
+
+      &.githubMenuItem {
+        margin-top: 25px;
+
+        .githubDirectBtn {
+          background: linear-gradient(135deg, #2563eb, #7c3aed);
+          color: #ffffff;
+          padding: 10px 18px;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 600;
+          text-align: center;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+          }
+        }
+      }
     }
+  }
 }

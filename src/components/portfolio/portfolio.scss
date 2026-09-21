@@ -1,62 +1,269 @@
-@import "../../global.scss";
+.portfolio {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 80px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.portfolio{
-    background-color: crimson;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
 
-    h1{
-        font-size: 50px;
+    .header {
+      text-align: center;
+      margin-bottom: 35px;
+
+      .sectionBadge {
+        background: rgba(139, 92, 246, 0.15);
+        color: #a78bfa;
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 800;
+        margin: 14px 0 8px 0;
+        color: #f8fafc;
+
+        @media (max-width: 768px) {
+          font-size: 30px;
+        }
+      }
+
+      .subtitle {
+        color: #94a3b8;
+        font-size: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
     }
 
-    ul{
-        margin: 10px;
-        padding: 0;
-        list-style: none;
-        display: flex;
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+
+      li {
+        background: rgba(30, 41, 59, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #94a3b8;
+        padding: 10px 22px;
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.25s ease;
+
+        &:hover {
+          color: #f8fafc;
+          border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        &.active {
+          background: linear-gradient(135deg, #2563eb, #7c3aed);
+          color: #ffffff;
+          border-color: #7c3aed;
+          box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+        }
+      }
     }
 
-    .container{
-        width: 70%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
+    .projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-bottom: 50px;
 
-        .item{
-            width: 220px;
-            height: 150px;
-            border-radius: 20px;
-            border: 1px solid rgb(240,239,239 );
-            margin: 10px 20px;
+      .projectCard {
+        background: rgba(30, 41, 59, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+          transform: translateY(-6px);
+          border-color: rgba(56, 189, 248, 0.4);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+
+          .imgBox img {
+            transform: scale(1.05);
+          }
+
+          .imgBox .overlay {
+            opacity: 1;
+          }
+        }
+
+        .imgBox {
+          position: relative;
+          height: 200px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+          }
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.85);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            position: relative;
-            transition: all .5s;
-            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
 
-            h3{
-                position: absolute;
-                font-size: 20px;
-            }
+            .viewRepoBtn {
+              background: #2563eb;
+              color: #ffffff;
+              padding: 10px 20px;
+              border-radius: 8px;
+              font-weight: 600;
+              font-size: 13px;
+              text-decoration: none;
+              box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
 
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                z-index: 1;
+              &:hover {
+                background: #3b82f6;
+              }
             }
-
-            &:hover{
-                background-color: $mainColor;
-                img{
-                    opacity: 0.2;
-                    z-index: 0;;
-                }
-            }
+          }
         }
+
+        .cardBody {
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+
+          .cardTitleLink {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+
+            h3 {
+              font-size: 20px;
+              font-weight: 700;
+              color: #f1f5f9;
+              margin-bottom: 10px;
+              transition: color 0.2s ease;
+
+              &:hover {
+                color: #38bdf8;
+              }
+            }
+          }
+
+          p {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            flex-grow: 1;
+          }
+
+          .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+
+            .tag {
+              background: rgba(15, 23, 42, 0.8);
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              color: #38bdf8;
+              font-size: 11px;
+              font-weight: 600;
+              padding: 4px 10px;
+              border-radius: 6px;
+            }
+          }
+
+          .cardFooter {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 14px;
+
+            .directRepoLink {
+              color: #38bdf8;
+              font-size: 13px;
+              font-weight: 600;
+              text-decoration: none;
+              display: inline-flex;
+              align-items: center;
+              gap: 6px;
+              transition: all 0.2s ease;
+
+              span {
+                transition: transform 0.2s ease;
+              }
+
+              &:hover {
+                color: #60a5fa;
+
+                span {
+                  transform: translateX(4px);
+                }
+              }
+            }
+          }
+        }
+      }
     }
+
+    .footerCTA {
+      text-align: center;
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 30px;
+
+      p {
+        font-size: 15px;
+        color: #94a3b8;
+        margin-bottom: 16px;
+      }
+
+      .btnGithubMain {
+        display: inline-block;
+        background: linear-gradient(135deg, #1e293b, #0f172a);
+        color: #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        padding: 12px 28px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+        transition: all 0.25s ease;
+
+        &:hover {
+          border-color: #38bdf8;
+          box-shadow: 0 4px 20px rgba(56, 189, 248, 0.25);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
 }

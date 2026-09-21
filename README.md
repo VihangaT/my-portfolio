@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Vihanga Liyanage - Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive developer portfolio showcasing experience as a **Tech Lead**, **AI Agent & Platform Architect**, **Full Stack Engineer (Java, Vue, React)**, and **SRE/DevOps Specialist**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 How to Run Locally
 
-### `npm start`
+### Prerequisites
+- Node.js (v16+)
+- npm (v7+)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 1. Install Dependencies
+```bash
+npm install --legacy-peer-deps
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 2. Start Local Development Server
+You can now run either of the following commands:
 
-### `npm test`
+```bash
+npm run dev
+```
+*or*
+```bash
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application will open automatically at **`http://localhost:3000`**.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Building for Production
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To create an optimized production build:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run build
+```
 
-### `npm run eject`
+This compiles the static assets into the `build/` directory ready for deployment.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🌐 Deployment Options
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Option 1: GitHub Pages (Recommended for GitHub repos)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. **Install `gh-pages` package**:
+   ```bash
+   npm install --save-dev gh-pages
+   ```
 
-## Learn More
+2. **Add homepage to `package.json`**:
+   ```json
+   "homepage": "https://VihangaT.github.io/my-portfolio",
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Add deploy scripts to `package.json`**:
+   ```json
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+   }
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Deploy**:
+   ```bash
+   npm run deploy
+   ```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Option 2: Vercel (Fastest & Zero Configuration)
 
-### Analyzing the Bundle Size
+1. Sign in to [Vercel](https://vercel.com/).
+2. Import your GitHub repository `VihangaT/my-portfolio`.
+3. Vercel automatically detects React CRA. Click **Deploy**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### Option 3: Netlify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Sign in to [Netlify](https://www.netlify.com/).
+2. Click **New Site from Git** and select your repository `VihangaT/my-portfolio`.
+3. Set build command to `npm run build` and publish directory to `build`.
+4. Click **Deploy Site**.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Option 4: Static Hosting with `serve` (Local or VM Test)
 
-### Deployment
+To test the production build locally:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npx serve -s build
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🛠️ Tech Stack
+
+- **Frontend**: React 17, JavaScript (ES6+), Sass / SCSS
+- **Typography & Animations**: ityped, Custom Keyframe Animations
+- **Icons**: Material-UI Icons
+- **Design System**: Dark Mode Slate palette, Glassmorphism, Responsive CSS Flexbox & Grid

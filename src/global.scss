@@ -1,1 +1,23 @@
-$mainColor:#15023a;
+$mainColor: #0f172a;
+$secondaryColor: #0b1120;
+$accentBlue: #38bdf8;
+$accentPurple: #a78bfa;
+$textLight: #f8fafc;
+$textMuted: #94a3b8;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  overflow-x: hidden;
+}

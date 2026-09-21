@@ -1,3 +1,269 @@
-.contact{
-    background-color: lightblue;
+.contact {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 80px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+
+    @media (max-width: 960px) {
+      flex-direction: column;
+    }
+
+    .left {
+      flex: 0.5;
+
+      .header {
+        margin-bottom: 30px;
+
+        .sectionBadge {
+          background: rgba(37, 99, 235, 0.15);
+          color: #60a5fa;
+          border: 1px solid rgba(37, 99, 235, 0.3);
+          padding: 6px 16px;
+          border-radius: 20px;
+          font-size: 13px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        h1 {
+          font-size: 38px;
+          font-weight: 800;
+          margin: 14px 0 8px 0;
+          color: #f8fafc;
+
+          @media (max-width: 768px) {
+            font-size: 30px;
+          }
+        }
+
+        .subtitle {
+          color: #94a3b8;
+          font-size: 15px;
+          line-height: 1.6;
+        }
+      }
+
+      .contactCards {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 30px;
+
+        .card {
+          background: rgba(30, 41, 59, 0.6);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px;
+          padding: 16px 20px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          backdrop-filter: blur(10px);
+          transition: transform 0.25s ease;
+
+          &:hover {
+            transform: translateX(6px);
+            border-color: rgba(56, 189, 248, 0.3);
+          }
+
+          .icon {
+            font-size: 24px;
+            background: rgba(15, 23, 42, 0.8);
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+
+            .label {
+              font-size: 12px;
+              color: #64748b;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+
+            }
+
+            a, span {
+              font-size: 15px;
+              font-weight: 600;
+              color: #f1f5f9;
+              text-decoration: none;
+            }
+
+            a:hover {
+              color: #38bdf8;
+            }
+          }
+        }
+      }
+
+      .socialLinks {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+
+        .socialBtn {
+          padding: 10px 20px;
+          border-radius: 8px;
+          font-size: 13px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.25s ease;
+
+          &.github {
+            background: #1e293b;
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+
+            &:hover {
+              background: #0f172a;
+              border-color: #38bdf8;
+            }
+          }
+
+          &.linkedin {
+            background: #0077b5;
+            color: #ffffff;
+
+            &:hover {
+              background: #005885;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 0.5;
+
+      .contactForm {
+        background: rgba(30, 41, 59, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 35px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+        h2 {
+          font-size: 22px;
+          font-weight: 700;
+          color: #f8fafc;
+          margin-bottom: 20px;
+        }
+
+        .inputGroup {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 16px;
+
+          label {
+            font-size: 13px;
+            color: #cbd5e1;
+            margin-bottom: 6px;
+            font-weight: 500;
+          }
+
+          input, textarea {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px 14px;
+            color: #f8fafc;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.25s ease;
+
+            &:focus {
+              border-color: #3b82f6;
+              box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+            }
+          }
+        }
+
+        .submitBtn {
+          width: 100%;
+          background: linear-gradient(135deg, #2563eb, #7c3aed);
+          color: #ffffff;
+          border: none;
+          padding: 14px;
+          border-radius: 8px;
+          font-weight: 700;
+          font-size: 15px;
+          cursor: pointer;
+          transition: all 0.25s ease;
+          margin-top: 10px;
+
+          &:hover:not(:disabled) {
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            transform: translateY(-2px);
+          }
+
+          &:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+          }
+        }
+
+        .directMailtoBtn {
+          width: 100%;
+          background: transparent;
+          border: none;
+          color: #94a3b8;
+          font-size: 12px;
+          font-weight: 500;
+          padding: 8px;
+          margin-top: 8px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          text-align: center;
+
+          &:hover {
+            color: #38bdf8;
+            text-decoration: underline;
+          }
+        }
+
+        .successMsg {
+          margin-top: 16px;
+          background: rgba(16, 185, 129, 0.15);
+          border: 1px solid rgba(16, 185, 129, 0.3);
+          color: #34d399;
+          padding: 14px;
+          border-radius: 8px;
+          font-size: 13px;
+          text-align: center;
+          line-height: 1.45;
+        }
+
+        .fallbackMsg {
+          margin-top: 16px;
+          background: rgba(59, 130, 246, 0.15);
+          border: 1px solid rgba(59, 130, 246, 0.3);
+          color: #93c5fd;
+          padding: 14px;
+          border-radius: 8px;
+          font-size: 13px;
+          text-align: center;
+          line-height: 1.45;
+        }
+      }
+    }
+  }
 }

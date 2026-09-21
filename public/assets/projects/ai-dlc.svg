@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#311042"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Glowing background orb -->
+  <circle cx="650" cy="120" r="140" fill="#6366f1" opacity="0.15" filter="blur(40px)"/>
+  <circle cx="150" cy="340" r="120" fill="#a855f7" opacity="0.12" filter="blur(40px)"/>
+
+  <!-- Code window mockup -->
+  <rect x="80" y="70" width="640" height="310" rx="16" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  
+  <!-- Window Header -->
+  <rect x="80" y="70" width="640" height="44" rx="16" fill="rgba(15,23,42,0.6)"/>
+  <circle cx="110" cy="92" r="6" fill="#ef4444"/>
+  <circle cx="130" cy="92" r="6" fill="#eab308"/>
+  <circle cx="150" cy="92" r="6" fill="#22c55e"/>
+  <text x="180" y="97" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">ai-dlc-base / workflow-ruleset.config</text>
+
+  <!-- Icon & Content -->
+  <g transform="translate(120, 150)">
+    <!-- Icon Circle -->
+    <rect x="0" y="0" width="68" height="68" rx="16" fill="rgba(99,102,241,0.2)" stroke="rgba(99,102,241,0.4)" stroke-width="1.5"/>
+    <text x="34" y="44" fill="#a5b4fc" font-size="34" text-anchor="middle">🤖</text>
+
+    <!-- Project Title -->
+    <text x="90" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800">ai-dlc-base</text>
+    <text x="90" y="60" fill="url(#accentGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600">AI Development Life Cycle Governance @ 99x</text>
+
+    <!-- Details -->
+    <text x="0" y="115" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400">Standard rule set builder for projects to govern AI-DLC workflows,</text>
+    <text x="0" y="138" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400">agentic task orchestration, and automated enterprise coding pipelines.</text>
+
+    <!-- Tags -->
+    <g transform="translate(0, 168)">
+      <rect x="0" y="0" width="130" height="28" rx="6" fill="rgba(99,102,241,0.25)" stroke="#6366f1" stroke-width="1"/>
+      <text x="65" y="18" fill="#c7d2fe" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">AI-DLC Flow</text>
+
+      <rect x="142" y="0" width="105" height="28" rx="6" fill="rgba(168,85,247,0.25)" stroke="#a855f7" stroke-width="1"/>
+      <text x="194" y="18" fill="#e9d5ff" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Rule Engine</text>
+
+      <rect x="259" y="0" width="90" height="28" rx="6" fill="rgba(56,189,248,0.2)" stroke="#38bdf8" stroke-width="1"/>
+      <text x="304" y="18" fill="#bae6fd" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">99x Global</text>
+    </g>
+  </g>
+</svg>
