@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="50%" stop-color="#075985"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="cardGrad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#bgGrad7)"/>
+  
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <circle cx="680" cy="140" r="140" fill="#38bdf8" opacity="0.2" filter="blur(40px)"/>
+  <circle cx="120" cy="320" r="120" fill="#0284c7" opacity="0.15" filter="blur(40px)"/>
+
+  <rect x="80" y="70" width="640" height="310" rx="16" fill="url(#cardGrad7)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  
+  <rect x="80" y="70" width="640" height="44" rx="16" fill="rgba(15,23,42,0.6)"/>
+  <circle cx="110" cy="92" r="6" fill="#ef4444"/>
+  <circle cx="130" cy="92" r="6" fill="#eab308"/>
+  <circle cx="150" cy="92" r="6" fill="#22c55e"/>
+  <text x="180" y="97" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">Department-MicroService / Java Spring Boot</text>
+
+  <g transform="translate(120, 150)">
+    <rect x="0" y="0" width="68" height="68" rx="16" fill="rgba(56,189,248,0.2)" stroke="rgba(56,189,248,0.4)" stroke-width="1.5"/>
+    <text x="34" y="44" fill="#38bdf8" font-size="34" text-anchor="middle">🏛️</text>
+
+    <text x="90" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800">Enterprise Microservices Suite</text>
+    <text x="90" y="60" fill="url(#skyGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600">Spring Boot REST Architecture &amp; Service Registry</text>
+
+    <text x="0" y="115" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400">Decoupled, high-throughput microservices architecture with Spring Cloud,</text>
+    <text x="0" y="138" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400">enterprise data layers, and clean domain-driven design patterns.</text>
+
+    <g transform="translate(0, 168)">
+      <rect x="0" y="0" width="135" height="28" rx="6" fill="rgba(56,189,248,0.25)" stroke="#38bdf8" stroke-width="1"/>
+      <text x="67" y="18" fill="#bae6fd" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Java Spring Boot</text>
+
+      <rect x="147" y="0" width="115" height="28" rx="6" fill="rgba(99,102,241,0.25)" stroke="#6366f1" stroke-width="1"/>
+      <text x="204" y="18" fill="#c7d2fe" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Microservices</text>
+
+      <rect x="274" y="0" width="95" height="28" rx="6" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="1"/>
+      <text x="321" y="18" fill="#bbf7d0" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">REST APIs</text>
+    </g>
+  </g>
+</svg>

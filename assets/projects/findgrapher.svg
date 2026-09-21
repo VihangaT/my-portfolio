@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="50%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#374151"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="cardGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#bgGrad9)"/>
+  
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <circle cx="680" cy="140" r="140" fill="#10b981" opacity="0.18" filter="blur(40px)"/>
+  <circle cx="120" cy="320" r="120" fill="#3b82f6" opacity="0.15" filter="blur(40px)"/>
+
+  <rect x="80" y="70" width="640" height="310" rx="16" fill="url(#cardGrad9)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  
+  <rect x="80" y="70" width="640" height="44" rx="16" fill="rgba(15,23,42,0.6)"/>
+  <circle cx="110" cy="92" r="6" fill="#ef4444"/>
+  <circle cx="130" cy="92" r="6" fill="#eab308"/>
+  <circle cx="150" cy="92" r="6" fill="#22c55e"/>
+  <text x="180" y="97" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">FindGrapher / Research / Graph Algorithms</text>
+
+  <g transform="translate(120, 150)">
+    <rect x="0" y="0" width="68" height="68" rx="16" fill="rgba(16,185,129,0.2)" stroke="rgba(16,185,129,0.4)" stroke-width="1.5"/>
+    <text x="34" y="44" fill="#34d399" font-size="34" text-anchor="middle">📈</text>
+
+    <text x="90" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="800">FindGrapher Research Platform</text>
+    <text x="90" y="60" fill="url(#emeraldGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600">Final Year Academic Research Project</text>
+
+    <text x="0" y="115" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400">Interactive graph algorithmic visualizer and data mining research repository,</text>
+    <text x="0" y="138" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400">designed to evaluate and benchmark complex network traversal methodologies.</text>
+
+    <g transform="translate(0, 168)">
+      <rect x="0" y="0" width="105" height="28" rx="6" fill="rgba(52,211,153,0.25)" stroke="#34d399" stroke-width="1"/>
+      <text x="52" y="18" fill="#a7f3d0" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">JavaScript</text>
+
+      <rect x="117" y="0" width="145" height="28" rx="6" fill="rgba(99,102,241,0.25)" stroke="#6366f1" stroke-width="1"/>
+      <text x="189" y="18" fill="#c7d2fe" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Graph Algorithms</text>
+
+      <rect x="274" y="0" width="130" height="28" rx="6" fill="rgba(56,189,248,0.2)" stroke="#38bdf8" stroke-width="1"/>
+      <text x="339" y="18" fill="#bae6fd" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Academic Thesis</text>
+    </g>
+  </g>
+</svg>
