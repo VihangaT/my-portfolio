@@ -13,6 +13,7 @@ export default function Intro() {
         backDelay: 1500,
         backSpeed: 40,
         strings: [
+          "Forward Deployed Engineer",
           "Tech Lead",
           "Logistics & Supply Chain Specialist",
           "Fullstack Dev with AI Agentic Flows",
